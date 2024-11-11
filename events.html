@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin: 20px;
+            border: none;
+        }
+        .box, .box1, .box2{
+            width:300px;
+            height: 300px;
+            background-color: antiquewhite;
+        }
+        p{
+            transition: 0.4s;
+        }
+        .box1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn1">Click</button>
+    <button class="btn2">Dblclick</button>
+    <button class="btn3">Mouseenter</button>
+    <button class="btn4">Mouseleave</button>
+    <button class="btn5">MouseDown</button>
+    <button class="btn6">MouseUp</button>
+    <button class="btn7">Mouseover</button>
+    <button class="btn8">Hide</button>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ipsum distinctio? Vel, eos asperiores impedit ex sequi consectetur iusto modi maxime suscipit aliquid possimus dolores doloribus delectus animi nihil minus.</p>
+    </div>
+    <button class="btn9">Show</button>
+    <div class="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ipsum distinctio? Vel, eos asperiores impedit ex sequi consectetur iusto modi maxime suscipit aliquid possimus dolores doloribus delectus animi nihil minus.</p>
+    </div>
+    <button class="btn10">Toggle</button>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ipsum distinctio? Vel, eos asperiores impedit ex sequi consectetur iusto modi maxime suscipit aliquid possimus dolores doloribus delectus animi nihil minus.</p>
+    </div>
+    <input type="text" placeholder="keypress" class="input1"/>
+    <input type="text" placeholder="keyup" class="input2"/>
+    <input type="text" placeholder="keydown" class="input3"/>
+    
+
+
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+        $(".btn1").click(function(){
+            alert("hello..");
+        });
+
+        $(".btn2").dblclick(function(){
+            alert("hello..");
+        });
+
+        $(".btn3").mouseenter(function(){
+            alert("hello..");
+        });
+
+        $(".btn4").mouseleave(function(){
+            alert("hello..");
+        });
+
+        $(".btn5").mousedown(function(){
+            alert("hello..");
+        });
+
+        $(".btn6").mouseup(function(){
+            alert("hello..");
+        });
+
+        $(".btn7").mouseover(function(){
+            alert("hello..");
+        });
+
+        $(".input1").keypress(function(){
+            alert("hello..");
+        });
+
+        $(".input2").keyup(function(){
+            alert("hello..");
+        });
+
+        $(".input3").keydown(function(){
+            alert("hello..");
+        });
+        $(".btn8").click(function(){
+            $(".box").hide();
+        });
+
+        $(".btn9").click(function(){
+            $(".box1").show();
+        });
+
+        $(".btn10").click(function(){
+            $(".box2").toggle();
+        });
+    </script>
+</body>
+</html>

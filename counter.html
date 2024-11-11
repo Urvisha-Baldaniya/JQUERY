@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <title>Increment Counter</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #8e44ad;
+  font-family: "Roboto Mono", sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 50px;
+  text-align: center;
+}
+
+.counter {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+i {
+  font-size: 60px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="counter-container">
+    <i class="fab fa-twitter fax-3x"></i>
+    <div class="counter" data-target="12000"></div>
+  </div>
+
+  <div class="counter-container">
+    <i class="fab fa-youtube fax-3x"></i>
+    <div class="counter" data-target="5000"></div>
+  </div>
+
+  <div class="counter-container">
+    <i class="fab fa-facebook fax-3x"></i>
+    <div class="counter" data-target="7500"></div>
+  </div>
+
+  <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+  <script>
+    const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  counter.innerText = "0";
+
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const c = +counter.innerText;
+
+    const increment = target / 200;
+    console.log(increment);
+
+    if (c < target) {
+      counter.innerText = `${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter, 1);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCounter();
+});
+
+  </script>
+</body>
+
+</html>

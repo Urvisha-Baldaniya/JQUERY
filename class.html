@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            margin: 20px;
+        }
+
+        .box, .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            margin: 20px;
+        }
+        .box4, .box6{
+            display: none;
+        }
+        p{
+            transition: all 0.4s linear;
+        }
+        .active{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+   <button class="btn">Addclass</button>
+   <div class="box"></div>
+
+   <button class="btn1">removeclass</button>
+   <div class="box1 active"></div>
+
+   <button class="btn2">toggleclass</button>
+   <div class="box2"></div>
+
+   <button class="btn3">slideUp</button>
+   <div class="box3"></div>
+
+    <button class="btn4">slideDown</button>
+    <div class="box4"></div>
+
+    <button class="btn5">slideToggle</button>
+    <div class="box5"></div>
+
+    <button class="btn6">fadeIn</button>
+    <div class="box6"></div>
+
+    <button class="btn7">fadeOut</button>
+    <div class="box7"></div>
+
+    <button class="btn8">fadeToggle</button>
+    <div class="box8"></div>
+
+    <button class="btn9">css</button>
+    <div class="box9">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, dolore unde sapiente adipisci vitae autem maiores beatae quae amet molestiae illo rerum animi enim iste ipsum voluptas porro alias nesciunt.</p>
+    </div>
+
+    <button class="btn10">Multiple css</button>
+    <div class="box10">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quibusdam accusamus quisquam cupiditate similique cum perferendis officia minima libero, nemo soluta, quaerat nesciunt quis id porro veniam praesentium corrupti est?</p>
+    </div>
+
+
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+        $(".btn").click(function(){
+            $(".box").addClass("active");
+        });
+
+        $(".btn1").click(function(){
+            $(".box1").removeClass("active");
+        });
+
+        $(".btn2").click(function(){
+            $(".box2").toggleClass("active");
+        });
+
+
+        $(".btn3").click(function(){
+            $(".box3").slideUp(2000);
+        });
+
+        $(".btn4").click(function(){
+            $(".box4").slideDown(2000);
+        });
+
+        $(".btn5").click(function(){
+            $(".box5").slideToggle(2000);
+        });
+
+        $(".btn6").click(function(){
+            $(".box6").fadeIn(2000);
+        });
+
+        $(".btn7").click(function(){
+            $(".box7").fadeOut(2000);
+        });
+
+        $(".btn8").click(function(){
+            $(".box8").fadeToggle(2000);
+        });
+
+        $(".btn9").click(function(){
+            $(".box9").css("font-size","26px");
+        });
+        
+        $(".btn10").click(function(){
+            $(".box10").css({"font-size":"23px","color":"white","font-weiht":"bold"});
+        });
+    </script>
+</body>
+</html>

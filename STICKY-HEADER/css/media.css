@@ -1,0 +1,24 @@
+@media(max-width:767px){
+    
+    header .toggle{
+        display: block;
+    }
+    header nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+        
+    }
+    header nav li a{
+        color: white;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li{
+        margin: 10px 20px;
+    }
+}

@@ -1,0 +1,133 @@
+
+  /* XL */
+@media(max-width:1399px){
+
+}
+
+/* LG */
+@media(max-width:1199px){
+    .col-lg-12{
+        width: 100%;
+    }
+    .col-lg-6{
+        width: 50%;
+    }
+
+    .toggle-click{
+        width: 75%;
+    }
+    .aside-click{
+        width: 25%;
+        transform: translateX(0%);
+    }
+    #chart2{
+        margin-left: 20px !important;
+    }
+    .map-container{
+        margin: 20px 0 0 0;
+        height: 600px;
+    }
+
+    /* ASIDE */
+    aside{
+        transform: translateX(-100%);
+    }
+    header, main, footer{
+        width: 100%;
+    }
+    #chart1{
+        margin-bottom: 20px;
+    }
+
+    /* ANALYTICS-BOX */
+    .col-6:nth-child(2) .analytics-box, .col-6:last-child .analytics-box{
+        margin-right: 0 !important;
+    }
+
+    .order-lg-3{
+        order: 3;
+    }
+    .order-lg-4{
+        order: 4;
+    }
+    .order-lg-5{
+        order: 5;
+    }
+}
+
+  /* Md */
+@media(max-width:991px){
+    .col-md-12{
+        width: 100%;
+    }
+      /* MAP */
+      .map-container{
+        height: 500px;
+      }
+
+      /* LATEST-PROJECT */
+      .latest-projects{
+        margin-right: 0;
+      }
+      table th:nth-child(2), table th:nth-child(3){
+        display: none;
+      }
+      table td:nth-child(2), table td:nth-child(3){
+        display: none;
+      }
+}
+
+  /* SM */
+@media(max-width:768px){
+
+    .col-sm-12{
+        width: 100%;
+    }
+    header .profile li .icon-cog{
+        display: block;
+    }
+    header .profile li:last-child a{
+        display: none;
+    }
+
+     /* MAP */
+     .map-container{
+        height: 400px;
+      }
+
+      
+}
+
+  /* XS */
+@media(max-width:575px){
+    .col-xs-12{
+        width: 100%;
+    }
+
+    /* ANALYTICS-BOX */
+    .col-6:nth-child(1) .analytics-box, .col-6:nth-child(3) .analytics-box{
+        margin-right: 0 !important;
+    }
+
+    /* MAP */
+    .map-container{
+        height: 300px;
+      }
+      .calender{
+        margin-bottom: 20px ;
+      }
+      #chart2{
+        margin-left: 0 !important;
+      }
+
+      /* LATEST-PROJECT */
+
+      table th:nth-child(2), table th:nth-child(3), table th:last-child{
+        display: none;
+      }
+      table td:nth-child(2), table td:nth-child(3), table td:last-child{
+        display: none;
+      }
+      
+    
+}
